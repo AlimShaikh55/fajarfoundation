@@ -139,3 +139,7 @@ footer {
   color: white;
   padding: 40px;
 }
+.logo img {
+  height: 50px;
+  width: auto;
+}
