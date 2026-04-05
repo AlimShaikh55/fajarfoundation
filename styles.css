@@ -1,20 +1,142 @@
-// Counter Animation
-const counters = document.querySelectorAll('.counter');
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #F7F1E5;
+  color: #3B2A1A;
+}
 
-counters.forEach(counter => {
-  const update = () => {
-    const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText;
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}
 
-    const increment = target / 100;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: white;
+  position: sticky;
+  top: 0;
+}
 
-    if (count < target) {
-      counter.innerText = Math.ceil(count + increment);
-      setTimeout(update, 20);
-    } else {
-      counter.innerText = target;
-    }
-  };
+.navbar a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #3B2A1A;
+}
 
-  update();
-});
+.cta-nav {
+  background: #E6B422;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+  background: linear-gradient(to right, #F7F1E5, #fff);
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero-buttons button {
+  margin-right: 10px;
+}
+
+.primary {
+  background: #E6B422;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.secondary {
+  border: 1px solid #3B2A1A;
+  background: transparent;
+  padding: 12px 20px;
+}
+
+.split {
+  display: flex;
+  padding: 80px;
+  gap: 50px;
+}
+
+.split img {
+  width: 300px;
+}
+
+.stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.approach {
+  text-align: center;
+  padding: 80px;
+}
+
+.approach-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.approach-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.programs {
+  padding: 80px;
+  text-align: center;
+}
+
+.program-grid {
+  display: flex;
+  gap: 30px;
+}
+
+.program-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.program-card:hover {
+  transform: translateY(-10px);
+}
+
+.impact {
+  padding: 80px;
+  text-align: center;
+  background: #fff;
+}
+
+.impact-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.cta {
+  background: #E6B422;
+  padding: 60px;
+  text-align: center;
+}
+
+footer {
+  background: #3B2A1A;
+  color: white;
+  padding: 40px;
+}
