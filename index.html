@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fajar Foundation</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -21,35 +21,38 @@
     <a href="#">About</a>
     <a href="#">Programs</a>
     <a href="#">Impact</a>
-    <a href="#">Contact</a>
+    <a href="#" class="cta-nav">Partner</a>
   </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-text">
-    <h1>What is my future?</h1>
-    <p>Millions of rural youth ask this question. Fajar Foundation helps them discover the answer.</p>
-    <div class="buttons">
-      <button class="primary">Explore Programs</button>
-      <button class="secondary">Partner With Us</button>
-    </div>
-  </div>
+  <div class="hero-content">
+    <h1>Shaping Futures of Rural Youth</h1>
+    <p>Millions of students ask, "What is my future?" We help them find answers through guidance, exposure, and skills.</p>
 
-  <div class="hero-image">
-    <img src="logo.png" alt="Fajar Logo">
+    <div class="hero-buttons">
+      <button class="primary">Explore Programs</button>
+      <button class="secondary">Get Involved</button>
+    </div>
   </div>
 </section>
 
-<!-- PROBLEM -->
-<section class="problem">
-  <h2>The Reality We Cannot Ignore</h2>
-  <p>Millions of students lack access to proper career guidance and opportunities.</p>
+<!-- PROBLEM + IMAGE SPLIT -->
+<section class="split">
+  <div class="split-text">
+    <h2>The Challenge</h2>
+    <p>Across rural India, students lack access to structured career guidance. This leads to confusion, dropouts, and missed opportunities.</p>
 
-  <div class="stats">
-    <div><h3>5000+</h3><p>Students</p></div>
-    <div><h3>70%</h3><p>Unaware</p></div>
-    <div><h3>1 in 3</h3><p>Dropouts</p></div>
+    <div class="stats">
+      <div><h3>5000+</h3><p>Students Reached</p></div>
+      <div><h3>70%</h3><p>Lack Awareness</p></div>
+      <div><h3>1 in 3</h3><p>Dropouts</p></div>
+    </div>
+  </div>
+
+  <div class="split-image">
+    <img src="assets/logo.png" alt="students">
   </div>
 </section>
 
@@ -57,32 +60,35 @@
 <section class="approach">
   <h2>Our Approach</h2>
   <div class="approach-grid">
-    <div>
+    <div class="approach-card">
       <h3>Agency</h3>
-      <p>Helping students take control of their future.</p>
+      <p>We help youth take ownership of their decisions and believe in their potential.</p>
     </div>
-    <div>
+    <div class="approach-card">
       <h3>Preparedness</h3>
-      <p>Providing knowledge and skills for decision making.</p>
+      <p>We equip them with tools, knowledge, and exposure for informed choices.</p>
     </div>
   </div>
 </section>
 
 <!-- PROGRAMS -->
 <section class="programs">
-  <h2>What We Do</h2>
-  <div class="cards">
-    <div class="card">
+  <h2>Our Programs</h2>
+
+  <div class="program-grid">
+    <div class="program-card">
       <h3>Career Guidance</h3>
-      <p>Helping students explore career options.</p>
+      <p>Structured workshops helping students navigate post-10th and 12th pathways.</p>
     </div>
-    <div class="card">
-      <h3>School Engagement</h3>
-      <p>Working with schools for better guidance systems.</p>
+
+    <div class="program-card">
+      <h3>School Partnerships</h3>
+      <p>Working with institutions to strengthen guidance systems.</p>
     </div>
-    <div class="card">
-      <h3>Skill Development</h3>
-      <p>Preparing youth for future opportunities.</p>
+
+    <div class="program-card">
+      <h3>Youth Readiness</h3>
+      <p>Building life skills, exposure, and confidence among youth.</p>
     </div>
   </div>
 </section>
@@ -90,7 +96,8 @@
 <!-- IMPACT -->
 <section class="impact">
   <h2>Our Impact</h2>
-  <div class="impact-stats">
+
+  <div class="impact-grid">
     <div><h3 class="counter" data-target="1200">0</h3><p>Students</p></div>
     <div><h3 class="counter" data-target="25">0</h3><p>Workshops</p></div>
     <div><h3 class="counter" data-target="10">0</h3><p>Schools</p></div>
@@ -98,16 +105,27 @@
   </div>
 </section>
 
-<!-- CTA -->
+<!-- CTA STRIP -->
 <section class="cta">
-  <h2>Be a part of shaping futures</h2>
-  <button class="primary">Join Us</button>
+  <div class="cta-content">
+    <h2>Be a part of shaping futures</h2>
+    <button class="primary">Partner With Us</button>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 Fajar Foundation</p>
-  <p>connect@fajarfoundation.org</p>
+  <div class="footer-content">
+    <div>
+      <h3>Fajar Foundation</h3>
+      <p>Empowering rural youth through agency and preparedness.</p>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <p>connect@fajarfoundation.org</p>
+    </div>
+  </div>
 </footer>
 
 <script src="script.js"></script>
