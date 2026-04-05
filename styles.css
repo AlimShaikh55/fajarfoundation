@@ -38,13 +38,13 @@ h1, h2, h3 {
 }
 
 .logo img {
-  height: 50px;
+  height: 150px;
   width: auto;
   transition: 0.3s ease;
 }
 
 .logo img:hover {
-  transform: scale(1.05);
+  transform: scale(2.05);
 }
 
 /* NAV LINKS */
