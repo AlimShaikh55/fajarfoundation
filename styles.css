@@ -12,81 +12,131 @@ h1, h2, h3 {
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 20px 40px;
-  background: #fff;
+  padding: 20px 80px;
+  background: white;
+  position: sticky;
+  top: 0;
 }
 
 .navbar a {
-  margin: 0 10px;
+  margin: 0 15px;
   text-decoration: none;
   color: #3B2A1A;
 }
 
+.cta-nav {
+  background: #E6B422;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
 .hero {
+  height: 90vh;
   display: flex;
-  padding: 80px;
   align-items: center;
+  padding: 0 80px;
+  background: linear-gradient(to right, #F7F1E5, #fff);
 }
 
-.hero-text {
-  flex: 1;
+.hero-content {
+  max-width: 600px;
 }
 
-.hero-image img {
-  width: 250px;
-  animation: rotate 10s linear infinite;
+.hero h1 {
+  font-size: 48px;
 }
 
-@keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.buttons button {
+.hero-buttons button {
   margin-right: 10px;
 }
 
 .primary {
   background: #E6B422;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 20px;
   cursor: pointer;
 }
 
 .secondary {
-  background: transparent;
   border: 1px solid #3B2A1A;
-  padding: 10px 20px;
+  background: transparent;
+  padding: 12px 20px;
 }
 
-.problem, .approach, .programs, .impact, .cta {
-  padding: 60px;
-  text-align: center;
-}
-
-.stats, .approach-grid, .cards, .impact-stats {
+.split {
   display: flex;
-  justify-content: center;
+  padding: 80px;
+  gap: 50px;
+}
+
+.split img {
+  width: 300px;
+}
+
+.stats {
+  display: flex;
   gap: 30px;
   margin-top: 20px;
 }
 
-.card {
+.approach {
+  text-align: center;
+  padding: 80px;
+}
+
+.approach-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.approach-card {
   background: white;
-  padding: 20px;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.programs {
+  padding: 80px;
+  text-align: center;
+}
+
+.program-grid {
+  display: flex;
+  gap: 30px;
+}
+
+.program-card {
+  background: white;
+  padding: 30px;
   border-radius: 10px;
   transition: 0.3s;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.program-card:hover {
+  transform: translateY(-10px);
+}
+
+.impact {
+  padding: 80px;
+  text-align: center;
+  background: #fff;
+}
+
+.impact-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 
 .cta {
   background: #E6B422;
+  padding: 60px;
+  text-align: center;
 }
 
 footer {
-  text-align: center;
-  padding: 20px;
+  background: #3B2A1A;
+  color: white;
+  padding: 40px;
 }
