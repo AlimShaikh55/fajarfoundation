@@ -49,6 +49,72 @@
   animation: slowRotate 12s linear infinite;
 }
 
+/* IMPACT */
+#impact {
+  background: var(--cream-light);
+  padding: 6rem 5rem;
+  text-align: center;
+}
+
+.impact-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.impact-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 600;
+  color: var(--brown-dark);
+  margin-bottom: 1rem;
+}
+
+.impact-sub {
+  font-size: 15px;
+  color: var(--text-muted);
+  max-width: 500px;
+  margin: 0 auto 3rem;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.impact-card {
+  background: var(--cream);
+  border: 1px solid var(--border-card);
+  border-radius: 12px;
+  padding: 2rem 1rem;
+}
+
+.impact-number {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.impact-label {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .impact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+ 
+
   /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -1003,3 +1069,40 @@ He has supported women farmers and community groups in building sustainable live
 
 </body>
 </html>
+
+// IMPACT COUNTER ANIMATION
+const counters = document.querySelectorAll('.impact-number');
+
+const animateCounters = () => {
+  counters.forEach(counter => {
+    const target = +counter.getAttribute('data-target');
+    let count = 0;
+
+    const speed = target / 100; // adjust speed here
+
+    const update = () => {
+      count += speed;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count);
+        requestAnimationFrame(update);
+      } else {
+        counter.innerText = target.toLocaleString();
+      }
+    };
+
+    update();
+  });
+};
+
+// Trigger when section is visible
+const impactSection = document.querySelector('#impact');
+
+const impactObserver = new IntersectionObserver((entries) => {
+  if (entries[0].isIntersecting) {
+    animateCounters();
+    impactObserver.disconnect(); // run only once
+  }
+}, { threshold: 0.3 });
+
+impactObserver.observe(impactSection);
